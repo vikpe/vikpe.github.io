@@ -7,19 +7,11 @@ My synthwave inspired personal website, built with [Jekyll](https://jekyllrb.com
 
 ---
 
-## Install
+## Development
 1. Clone/download repo
 2. `yarn install`
 3. `cd docs && bundle install`
-
----
-
-## Development
-```shell
-yarn watch
-```
-
-Site is served @ **`http://localhost:3000`** with live updates.
+4. `yarn watch` - site is served @ **`http://localhost:3000`** with live updates.
 
 ---
 
