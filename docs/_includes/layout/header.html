@@ -1,0 +1,28 @@
+<div class="app-section mt-0">
+
+    <nav class="navbar columns is-vcentered is-mobile is-gapless is-justify-content-space-between m-0"
+         role="navigation"
+         aria-label="main navigation">
+        <div class="column is-narrow">
+            <a href="{{ '/' | prepend: site.url}}" class="app-color-magenta">
+                <img src="{{'/assets/app/img/vikpe_logo_icon.svg' | prepend: site.url}}" alt="{{site.name}} logo"
+                     width="32" height="32" />
+
+                {{site.name}}
+            </a>
+        </div>
+
+        <div class="column is-narrow">
+            <a href="{{site.custom.github_url}}" class="app-color-cyan" title="vikpe at GitHub">
+                <img src="{{'/assets/app/img/icons/github.svg' | prepend: site.url}}"
+                     alt="GitHub"
+                     width="24" height="24" />
+
+                <span class="is-hidden-mobile">vikpe</span>
+            </a>
+        </div>
+    </nav>
+
+    <hr class="app-bg-gradient my-0">
+
+</div>

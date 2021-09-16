@@ -1,0 +1,79 @@
+@import "devheart/variables";
+@import "node_modules/bulma/sass/utilities/mixins";
+
+// Colors
+$blue: hsl(217, 71%,  53%);
+$cyan: #04bff1;
+$magenta: #ed0d94;
+
+// General colors
+$scheme-main: #000225;
+$scheme-main-bis: lighten($scheme-main, 6);
+$scheme-main-ter: lighten($scheme-main-bis, 9);
+$scheme-invert: $white;
+$scheme-invert-bis: $white-bis;
+$scheme-invert-ter: $white-ter;
+
+$border: darken($blue, 30);
+$border-hover: lighten($border, 12);
+$border-light: $border-hover;
+$border-light-hover: lighten($border-light, 12);
+
+$background: $border;
+
+// Text colors
+$text: lighten(#7c7c7c, 16);
+$text-invert: findColorInvert($text);
+$text-light: lighten($text, 8);
+$text-strong: $text-light;
+
+// Link colors
+$link: $cyan;
+$link-invert: findColorInvert($link);
+$link-light: findLightColor($link);
+$link-dark: findDarkColor($link);
+$link-visited: $purple;
+
+$link-hover: $link-light;
+$link-hover-border: $grey-light;
+
+$link-focus: $grey-darker;
+$link-focus-border: $blue;
+
+$link-active: $grey-darker;
+$link-active-border: $grey-dark;
+
+$spacing-values: (
+        "0": 0,
+        "1": $dh-spacer,
+        "1p5": 1.5*$dh-spacer,
+        "2": 2*$dh-spacer,
+        "3": 3*$dh-spacer,
+        "a": "auto",
+);
+
+@import "node_modules/bulma/sass/utilities/initial-variables";
+@import "node_modules/bulma/sass/utilities/derived-variables";
+
+// core
+$body-size: $dh-font-size-mobile;
+
+$family-primary: "Roboto", BlinkMacSystemFont, -apple-system, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-sans-serif: $family-primary;
+
+// content
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+$tablet: $dh-bp-tablet;
+
+// layout
+$footer-background-color: none;
+$footer-padding: 0 $size-large $size-large;
+
+$hr-margin: 3*$dh-spacer 0;
+$hr-height: 1px;
+
+$section-padding: 0;
+$section-padding-medium: $section-padding;
+$section-padding-large: $section-padding;
+$section-padding-desktop: $section-padding;

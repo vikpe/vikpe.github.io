@@ -1,0 +1,31 @@
+---
+layout: null
+custom_sitemap_exclude: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for page in site.pages %}
+    {% unless page.custom_sitemap_exclude == true or page.title == "" or page.url contains "assets/" %}
+    <url>
+        <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
+        {% if page.custom_sitemap.lastmod %}
+        <lastmod>{{ page.custom_sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
+        {% elsif page.date %}
+        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+        {% else %}
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        {% endif %}
+        {% if page.custom_sitemap.changefreq %}
+        <changefreq>{{ page.custom_sitemap.changefreq }}</changefreq>
+        {% else %}
+        <changefreq>monthly</changefreq>
+        {% endif %}
+        {% if page.custom_sitemap.priority %}
+        <priority>{{ page.custom_sitemap.priority }}</priority>
+        {% else %}
+        <priority>0.3</priority>
+        {% endif %}
+    </url>
+    {% endunless %}
+    {% endfor %}
+</urlset>

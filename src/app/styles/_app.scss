@@ -1,0 +1,198 @@
+@import "bulma_variables";
+@import "node_modules/bulma/sass/utilities/mixins";
+
+// mixins
+@mixin app-grayscale() {
+  filter: grayscale(1);
+
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+
+@mixin app-arrowed {
+  $size: 1.25em;
+
+  &::after {
+    display: block;
+    width: $size;
+    min-width: $size;
+    height: $size;
+    min-height: $size;
+    content: '';
+    margin-left: auto;
+    background: url(/assets/app/img/icons/chevron_forward.svg) no-repeat center right;
+    background-size: contain;
+    opacity: .5;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+@mixin app-text-glow() {
+  text-shadow: .15em 0 .1em rgb(255 0 255 / 40%), -.15em 0 .15em rgb(0 255 191 / 40%), .15em 0 .35em rgb(49 122 255 / 40%);
+}
+
+// typography
+.app-text-glow, h1, h2, h3, h4 {
+  @include app-text-glow();
+}
+
+// effects
+.app-bg-gradient {
+  background: linear-gradient(to right, $magenta, $cyan);
+}
+
+hr.app-bg-gradient {
+  height: 2px;
+}
+
+.app-bg-gradient-multi {
+  background: linear-gradient(127deg, rgba($cyan, .25), transparent),
+  linear-gradient(217deg, rgba($magenta, .25), transparent 70.71%);
+}
+
+// layout
+.app-sun {
+  opacity: .7;
+  display: inline-block;
+  margin-right: $dh-spacer;
+
+  @include until(323px) {
+    display: none;
+  }
+
+  @include until($tablet) {
+    width: 64px;
+  }
+}
+
+#app-hero {
+  border: 4px solid rgba(white, 0.1);
+  box-shadow: rgba($magenta, .4) 0 0 48px;
+  color: $text-light !important;
+  @include app-text-glow();
+}
+
+.app-synthwave-grid-container {
+  $grid-height: 480px;
+  $grid-color: rgba($cyan, .2);
+  $grid-size: 2*$dh-spacer;
+
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .app-synthwave-grid,
+  .app-synthwave-fade {
+    height: $grid-height;
+    transform: rotateZ(30deg);
+  }
+
+  .app-synthwave-grid {
+    background: linear-gradient(180deg, $grid-color 0 1px, transparent 0), linear-gradient(90deg, $grid-color 0 1px, transparent 0);
+    background-size: $grid-size $grid-size, $grid-size $grid-size;
+  }
+
+  .app-synthwave-fade {
+    position: relative;
+    top: -$grid-height;
+    background: radial-gradient(transparent, $scheme-main);
+  }
+}
+
+
+// navbar
+.navbar a {
+  @extend .is-flex;
+  @extend .is-align-items-center;
+  height: 5*$dh-spacer;
+  padding: 0 $dh-spacer;
+  font-weight: bold;
+
+  img {
+    margin-right: .4*$dh-spacer;
+  }
+}
+
+
+.app-section {
+  margin: 2*$dh-spacer 2*$dh-spacer;
+
+  @include mobile {
+    margin-left: $dh-spacer;
+    margin-right: $dh-spacer;
+  }
+
+  p > img {
+    vertical-align: middle;
+    width: 1.25em;
+  }
+}
+
+
+// block links
+.app-link-list {
+  margin: $dh-spacer 0;
+
+  & > a {
+    @include app-arrowed();
+    display: flex;
+    min-height: 82px;
+    align-items: center;
+    margin-top: -1px;
+    padding: 1.5*$dh-spacer 1.5*$dh-spacer;
+    background-color: rgba($cyan, 0.05);
+    border: 1px solid $border;
+    border-top-color: transparent;
+
+    &:first-child {
+      margin-top: 0;
+      border-top-color: $border;
+    }
+
+    &:hover {
+      background-color: rgba($cyan, 0.1);
+      border-color: $border-hover;
+    }
+
+    .app-text {
+      @include mobile {
+        margin-top: -$dh-spacer;
+      }
+    }
+
+    .app-media-small img,
+    .app-media-large img {
+      display: block;
+      height: 2*$dh-spacer;
+    }
+
+    .app-media-small {
+      min-width: 6*$dh-spacer;
+    }
+
+    .app-media-large img {
+      width: 12*$dh-spacer;
+    }
+  }
+
+  &.app-dim > a {
+    @include app-grayscale();
+  }
+}
+
+
+// util
+.app-color-magenta {
+  color: $magenta;
+}
+
+.app-color-cyan {
+  color: $cyan;
+}

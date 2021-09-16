@@ -1,0 +1,29 @@
+@import "variables";
+
+@media screen and (min-width: $dh-bp-tablet) {
+  html {
+    font-size: $dh-font-size-default !important;
+  }
+}
+
+@each $level, $size in $dh-font-sizes {
+  h#{$level} {
+    margin-top: 2*$dh-spacer !important;
+    margin-bottom: .3em !important;
+  }
+}
+
+@each $level, $size in $dh-font-sizes {
+  h#{$level}, .dh-h#{$level} {
+    font-size: $size !important;
+    font-weight: bold !important;
+  }
+}
+
+.dh-text-large {
+  font-size: $dh-font-size-large !important;
+}
+
+.dh-text-small {
+  font-size: $dh-font-size-small !important;
+}
