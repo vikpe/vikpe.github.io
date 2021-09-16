@@ -181,10 +181,10 @@ hr.app-bg-gradient {
       width: 12*$dh-spacer;
     }
   }
+}
 
-  &.app-dim > a {
-    @include app-grayscale();
-  }
+a.app-dim, .app-dim > a {
+  @include app-grayscale();
 }
 
 
