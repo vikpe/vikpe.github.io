@@ -22,7 +22,7 @@
     "npx": "npx"
   },
   "devDependencies": {
-    "browser-sync": "^2.27.7",
+    "browser-sync": "^2.27.9",
     "bs-html-injector": "^3.0.3"
   },
   "dependencies": {
