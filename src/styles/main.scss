@@ -1,11 +1,10 @@
 @import "./tailwind";
 @import "./font_roboto";
-@import "./app";
+@import "./components";
+@import "./effects";
 
-.debug {
-  border: 1px solid red;
-
-  > * {
-    border: 1px solid yellow;
+@layer base {
+  a {
+    @apply text-vcyan hover:text-white;
   }
 }
