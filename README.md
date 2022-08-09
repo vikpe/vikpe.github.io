@@ -3,7 +3,7 @@
 
 My synthwave inspired personal website, built with [Astro](https://astro.build/) and [tailwindcss](https://tailwindcss.com/).
 
-![vikpe.org](https://raw.githubusercontent.com/vikpe/vikpe.github.io/master/docs/assets/app/img/vikpe_org_screenshot.jpg)
+![vikpe.org](.github/vikpe_org_screenshot.jpg)
 
 ---
 
