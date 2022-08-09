@@ -68,7 +68,7 @@
     unist-util-visit "^4.1.0"
     vfile "^5.3.2"
 
-"@astrojs/mdx@^0.8.0":
+"@astrojs/mdx@^0.8.1":
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/@astrojs/mdx/-/mdx-0.8.1.tgz#02c3cf47880af9a485342725f7e4690ad05ce6b1"
   integrity sha512-jYZOfTVPW+Zfx6XCVr3yx/pFgUAwUgv9LMJ9MBkHmbzSEKmS9oHTkoiuvNvHmBzcnz9BQfXJ9wlFjvPB9eTEFg==
@@ -111,10 +111,10 @@
   dependencies:
     prismjs "^1.28.0"
 
-"@astrojs/sitemap@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/sitemap/-/sitemap-0.3.0.tgz#ed730a7d23320ebdd012d200a41acade8c1315df"
-  integrity sha512-hjAF4hmMv899hQiIXoIKlsxkipHmiEnOna1SSL4RB7Ro83gJqPc92Anv3apJDK4RPKU9gnni1nUWi+r5TpMNSQ==
+"@astrojs/sitemap@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@astrojs/sitemap/-/sitemap-1.0.0.tgz#d5e7360e08f8f3b17bb1b8faa4c882aa39d18c25"
+  integrity sha512-42GxuF5FP7RaKXZrwGLBLOX3hPv+Wl7ExJC43O0J5e34ojJkLeKf7QfwN1UwrJlqH0Ywi0Fm4/xGe482G09+wg==
   dependencies:
     sitemap "^7.1.1"
     zod "^3.17.3"
@@ -1161,7 +1161,7 @@ astring@^1.6.0:
   resolved "https://registry.yarnpkg.com/astring/-/astring-1.8.3.tgz#1a0ae738c7cc558f8e5ddc8e3120636f5cebcb85"
   integrity sha512-sRpyiNrx2dEYIMmUXprS8nlpRg2Drs8m9ElX9vVEXaCB4XEAJhKfs7IcX0IwShjuOAjLR6wzIrgoptz1n19i1A==
 
-astro@^1.0.0-rc.8:
+astro@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.0.tgz#5796910930f21a4989b890e12a0f6938cc8c586b"
   integrity sha512-mk7/2iY0k0uSZX6eK6770vLZ0535XgmYxLKzKBVsM+W/nYwH96qJugC6PFvdKONyLceSicoULUsy+GYbKRuv1w==

@@ -13,10 +13,10 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^0.8.0",
-    "@astrojs/sitemap": "^0.3.0",
+    "@astrojs/mdx": "^0.8.1",
+    "@astrojs/sitemap": "^1.0.0",
     "@tailwindcss/typography": "^0.5.4",
-    "astro": "^1.0.0-rc.8",
+    "astro": "^1.0.0",
     "autoprefixer": "^10.4.8",
     "firebase-tools": "^11.5.0",
     "postcss": "^8.4.16",
