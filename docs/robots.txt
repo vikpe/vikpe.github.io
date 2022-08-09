@@ -1,5 +1,0 @@
----
-layout: null
-custom_sitemap_exclude: true
----
-Sitemap: {{site.url}}/sitemap.xml

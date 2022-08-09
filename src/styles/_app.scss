@@ -1,5 +1,44 @@
-@import "bulma_variables";
-@import "node_modules/bulma/sass/utilities/mixins";
+$dh-spacer: 1rem;
+
+// Colors
+$blue: hsl(217, 71%, 53%);
+$cyan: #04bff1;
+$magenta: #ed0d94;
+
+// General colors
+$scheme-main: #000225;
+$scheme-main-bis: lighten($scheme-main, 6);
+$scheme-main-ter: lighten($scheme-main-bis, 9);
+
+$border: darken($blue, 30);
+$border-hover: lighten($border, 12);
+$border-light: $border-hover;
+$border-light-hover: lighten($border-light, 12);
+
+$background: $border;
+
+// Text colors
+$text: lighten(#7c7c7c, 16);
+$text-light: lighten($text, 8);
+$text-strong: $text-light;
+
+$link: $cyan;
+
+// main
+
+body {
+  background-color: $scheme-main;
+  color: $text;
+}
+
+a {
+  color: $link;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
 
 // mixins
 @mixin app-grayscale() {
@@ -21,7 +60,7 @@
     min-height: $size;
     content: '';
     margin-left: auto;
-    background: url(/assets/app/img/icons/chevron_forward.svg) no-repeat center right;
+    background: url(/assets/img/icons/chevron_forward.svg) no-repeat center right;
     background-size: contain;
     opacity: .5;
   }
@@ -55,25 +94,10 @@ hr.app-bg-gradient {
 }
 
 // layout
-.app-sun {
-  opacity: .7;
-  display: inline-block;
-  margin-right: $dh-spacer;
-
-  @include until(323px) {
-    display: none;
-  }
-
-  @include until($tablet) {
-    width: 64px;
-  }
-}
-
 #app-hero {
   border: 4px solid rgba(white, 0.1);
   box-shadow: rgba($magenta, .4) 0 0 48px;
   color: $text-light !important;
-  @include app-text-glow();
 }
 
 .app-synthwave-grid-container {
@@ -84,6 +108,7 @@ hr.app-bg-gradient {
   position: absolute;
   z-index: -1;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -107,46 +132,14 @@ hr.app-bg-gradient {
 }
 
 
-// navbar
-.navbar a {
-  @extend .is-flex;
-  @extend .is-align-items-center;
-  height: 5*$dh-spacer;
-  padding: 0 $dh-spacer;
-  font-weight: bold;
-
-  img {
-    margin-right: .4*$dh-spacer;
-  }
-}
-
-
-.app-section {
-  margin: 2*$dh-spacer 2*$dh-spacer;
-
-  @include mobile {
-    margin-left: $dh-spacer;
-    margin-right: $dh-spacer;
-  }
-
-  p > img {
-    vertical-align: middle;
-    width: 1.25em;
-  }
-}
-
-
 // block links
 .app-link-list {
   margin: $dh-spacer 0;
 
   & > a {
     @include app-arrowed();
-    display: flex;
-    min-height: 82px;
-    align-items: center;
+    @apply flex items-center p-6;
     margin-top: -1px;
-    padding: 1.5*$dh-spacer 1.5*$dh-spacer;
     background-color: rgba($cyan, 0.05);
     border: 1px solid $border;
     border-top-color: transparent;
@@ -159,26 +152,6 @@ hr.app-bg-gradient {
     &:hover {
       background-color: rgba($cyan, 0.1);
       border-color: $border-hover;
-    }
-
-    .app-text {
-      @include mobile {
-        margin-top: -$dh-spacer;
-      }
-    }
-
-    .app-media-small img,
-    .app-media-large img {
-      display: block;
-      height: 2*$dh-spacer;
-    }
-
-    .app-media-small {
-      min-width: 6*$dh-spacer;
-    }
-
-    .app-media-large img {
-      width: 12*$dh-spacer;
     }
   }
 }
