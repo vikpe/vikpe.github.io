@@ -1161,10 +1161,10 @@ astring@^1.6.0:
   resolved "https://registry.yarnpkg.com/astring/-/astring-1.8.3.tgz#1a0ae738c7cc558f8e5ddc8e3120636f5cebcb85"
   integrity sha512-sRpyiNrx2dEYIMmUXprS8nlpRg2Drs8m9ElX9vVEXaCB4XEAJhKfs7IcX0IwShjuOAjLR6wzIrgoptz1n19i1A==
 
-astro@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.0.tgz#5796910930f21a4989b890e12a0f6938cc8c586b"
-  integrity sha512-mk7/2iY0k0uSZX6eK6770vLZ0535XgmYxLKzKBVsM+W/nYwH96qJugC6PFvdKONyLceSicoULUsy+GYbKRuv1w==
+astro@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.1.tgz#8b1c7e4d7ba3c906ab98f5407ac3894f1c1db953"
+  integrity sha512-oQltZ7Yk+ShztRL5NO+nyXVIZqBHjlL6yn6oDeJ/a+6D/rN6KMZQquKP21j87nSwnSnEUjS73EsFsIEvrxG4Tw==
   dependencies:
     "@astrojs/compiler" "^0.23.1"
     "@astrojs/language-server" "^0.20.0"
@@ -6462,10 +6462,10 @@ safe-stable-stringify@^2.3.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass@^1.54.3:
-  version "1.54.3"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.54.3.tgz#37baa2652f7f1fdadb73240ee9a2b9b81fabb5c4"
-  integrity sha512-fLodey5Qd41Pxp/Tk7Al97sViYwF/TazRc5t6E65O7JOk4XF8pzwIW7CvCxYVOfJFFI/1x5+elDyBIixrp+zrw==
+sass@^1.54.4:
+  version "1.54.4"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.54.4.tgz#803ff2fef5525f1dd01670c3915b4b68b6cba72d"
+  integrity sha512-3tmF16yvnBwtlPrNBHw/H907j8MlOX8aTBnlNX1yrKx24RKcJGPyLhFUwkoKBKesR3unP93/2z14Ll8NicwQUA==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
