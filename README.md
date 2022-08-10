@@ -15,9 +15,9 @@ My synthwave inspired personal website, built with [Astro](https://astro.build/)
 ---
 
 ## All commands
-| Command        | Action                                       |
-|----------------|----------------------------------------------|
-| `yarn dev`     | Starts local dev server at `localhost:3000`  |
-| `yarn build`   | Build your production site to `./dist/`      |
-| `yarn preview` | Preview your build locally, before deploying |
-| `yarn format`  | Format code using prettier                   |
+| Command        | Action                                      |
+|----------------|---------------------------------------------|
+| `yarn dev`     | Starts local dev server at `localhost:3000` |
+| `yarn build`   | Build production site to `/dist`            |
+| `yarn preview` | Preview build locally                       |
+| `yarn format`  | Format code using prettier                  |
