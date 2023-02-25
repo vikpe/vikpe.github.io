@@ -1,6 +1,6 @@
 @mixin app-arrowed {
   &::after {
-    content: '';
+    content: "";
     background-image: url(/assets/img/icons/chevron_forward.svg);
     @apply block bg-contain bg-repeat w-5 h-5 ml-auto opacity-50;
   }
@@ -16,7 +16,6 @@
   & > a {
     @include app-arrowed();
     @apply flex items-center p-6 border border-blue-500/30 border-t-transparent hover:border-blue-500/50 bg-vcyan/5 hover:bg-vcyan/10 -mt-px;
-
 
     &:first-child {
       @apply mt-0 border-t-blue-500/30 hover:border-t-blue-500/50;

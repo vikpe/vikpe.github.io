@@ -8,58 +8,96 @@ export interface Props {
 const { title } = Astro.props as Props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="initial-scale=1, width=device-width" />
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc4.woff2" />
-  <title>{title}</title>
-</head>
-<body class="min-w-[290px] text-sm sm:text-base text-gray-400 bg-vblue">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc4.woff2"
+    />
+    <title>{title}</title>
+  </head>
+  <body class="min-w-[290px] text-sm sm:text-base text-gray-400 bg-vblue">
+    <div class="max-w-4xl mx-auto px-4 relative">
+      <nav
+        class="flex h-[70px] justify-between items-stretch"
+        role="navigation"
+        aria-label="main navigation"
+      >
+        <a
+          href="/"
+          class="text-vmagenta flex items-center px-3 space-x-2 font-bold"
+        >
+          <img
+            src="/assets/img/vikpe_logo_icon.svg"
+            alt="vikpe"
+            width="24"
+            height="24"
+          />
+          <span>Viktor Persson</span>
+        </a>
 
-  <div class="max-w-4xl mx-auto px-4 relative">
+        <a
+          href="https://github.com/vikpe"
+          class="text-vcyan flex items-center px-3 space-x-2 font-bold"
+          title="vikpe at GitHub"
+        >
+          <img
+            src="/assets/img/icons/github.svg"
+            alt="GitHub"
+            width="24"
+            height="24"
+          />
+          <span class="hidden sm:inline">vikpe</span>
+        </a>
+      </nav>
 
-    <nav class="flex h-[70px] justify-between items-stretch" role="navigation" aria-label="main navigation">
-      <a href="/" class="text-vmagenta flex items-center px-3 space-x-2 font-bold">
-        <img src="/assets/img/vikpe_logo_icon.svg" alt="vikpe" width="24" height="24" /> <span>Viktor Persson</span>
-      </a>
+      <div class="h-0.5 bg-gradient-to-r from-vmagenta to-vcyan"></div>
 
-      <a href="https://github.com/vikpe" class="text-vcyan flex items-center px-3 space-x-2 font-bold" title="vikpe at GitHub">
-        <img src="/assets/img/icons/github.svg" alt="GitHub" width="24" height="24" /> <span class="hidden sm:inline">vikpe</span>
-      </a>
-    </nav>
-
-    <div class="h-0.5 bg-gradient-to-r from-vmagenta to-vcyan" />
-
-    <main>
+      <main>
         <article class="my-8">
           <slot />
         </article>
-    </main>
+      </main>
 
-    <div class="h-0.5 bg-gradient-to-r from-vmagenta to-vcyan" />
+      <div class="h-0.5 bg-gradient-to-r from-vmagenta to-vcyan"></div>
 
-    <div
-      class="text-sm app-text-glow flex justify-between items-center py-5">
-      <div>
-        &copy; Viktor Persson
+      <div class="text-sm app-text-glow flex justify-between items-center py-5">
+        <div>&copy; Viktor Persson</div>
+        <div>
+          <a
+            href="https://github.com/vikpe/vikpe.github.io"
+            class="app-dim flex space-x-2"
+            rel="nofollow"
+          >
+            <img
+              src="/assets/img/icons/github.svg"
+              alt="GitHub"
+              width="12"
+              height="12"
+            />
+            <span>Source on GitHub</span>
+          </a>
+        </div>
       </div>
-      <div>
-        <a href="https://github.com/vikpe/vikpe.github.io" class="app-dim flex space-x-2" rel="nofollow">
-          <img src="/assets/img/icons/github.svg" alt="GitHub" width="12" height="12" /> <span>Source on GitHub</span>
-        </a>
+
+      <div class="app-synthwave-grid-container">
+        <div class="app-synthwave-grid"></div>
+        <div class="app-synthwave-fade"></div>
       </div>
     </div>
-
-    <div class="app-synthwave-grid-container">
-      <div class="app-synthwave-grid"></div>
-      <div class="app-synthwave-fade"></div>
-    </div>
-
-  </div>
-
-</body>
+  </body>
 </html>
