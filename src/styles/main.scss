@@ -1,10 +1,20 @@
-@import "./tailwind";
-@import "./font_roboto";
-@import "./components";
-@import "./effects";
+@use "sass:meta";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@include meta.load-css("font_roboto");
+@include meta.load-css("components");
+@include meta.load-css("effects");
 
 @layer base {
   a {
     @apply text-vcyan hover:text-white;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-bold;
   }
 }

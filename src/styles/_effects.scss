@@ -5,7 +5,7 @@ $blue: #000225;
 #app-hero {
   background: linear-gradient(127deg, rgba($cyan, 0.25), transparent),
     linear-gradient(217deg, rgba($magenta, 0.25), transparent 70.71%);
-  box-shadow: rgba($magenta, 0.4) 0 0 48px;
+  box-shadow: rgba($magenta, 0.4) 0 0 64px;
 }
 
 .app-synthwave-grid-container {
@@ -30,7 +30,9 @@ $blue: #000225;
   .app-synthwave-grid {
     background: linear-gradient(180deg, $grid-color 0 1px, transparent 0),
       linear-gradient(90deg, $grid-color 0 1px, transparent 0);
-    background-size: $grid-size $grid-size, $grid-size $grid-size;
+    background-size:
+      $grid-size $grid-size,
+      $grid-size $grid-size;
   }
 
   .app-synthwave-fade {
@@ -45,6 +47,8 @@ h1,
 h2,
 h3,
 h4 {
-  text-shadow: 0.15em 0 0.1em rgb(255 0 255 / 40%),
-    -0.15em 0 0.15em rgb(0 255 191 / 40%), 0.15em 0 0.35em rgb(49 122 255 / 40%);
+  text-shadow:
+    0.15em 0 0.1em rgb(255 0 255 / 30%),
+    -0.15em 0 0.15em rgb(0 255 191 / 30%),
+    0.15em 0 0.35em rgb(49 122 255 / 30%);
 }
